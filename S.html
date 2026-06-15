@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Separate Boostik - Auto</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.section {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #374bb0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔥 Separate Boostik - Auto</h1>
+
+<div class="section">
+    <h2>Enter Product Name</h2>
+    <input type="text" id="productInput" placeholder="Enter product name...">
+    <button onclick="generateAll()">Generate All</button>
+</div>
+
+<div class="section">
+    <h2>1️⃣ Product Hunter</h2>
+    <textarea id="productOutput" rows="6"></textarea>
+</div>
+
+<div class="section">
+    <h2>2️⃣ Ad Script Generator</h2>
+    <textarea id="adOutput" rows="6"></textarea>
+</div>
+
+<div class="section">
+    <h2>3️⃣ Competitor Analyzer</h2>
+    <textarea id="competitorOutput" rows="6"></textarea>
+</div>
+
+<div class="section">
+    <h2>4️⃣ Supplier Finder</h2>
+    <textarea id="supplierOutput" rows="6"></textarea>
+</div>
+
+<script>
+function generateAll() {
+    const product = document.getElementById("productInput").value;
+
+    if (!product) {
+        alert("Please enter a product name");
+        return;
+    }
+
+    // PRODUCT HUNTER
+    document.getElementById("productOutput").value = 
+`Product Hunter for: ${product}
+
+1. ${product} Pro Version
+- Trending: Viral TikTok product
+- Audience: Teenagers
+- Selling Price: $20
+- Cost Price: $10
+- Profit: 50%
+- Competition: Medium
+- Strategy: Problem → Solution video
+
+2. ${product} Premium
+- Trending: Seasonal demand
+- Audience: Adults
+- Selling Price: $30
+- Cost Price: $15
+- Profit: 50%
+- Competition: Low
+- Strategy: Funny demo video`;
+
+    // AD SCRIPT
+    document.getElementById("adOutput").value = 
+`TikTok Ads for ${product}
+
+1️⃣
+Hook: "Tired of this problem?"
+Solution: ${product} fixes it fast
+Proof: Thousands love it!
+CTA: Buy now!
+
+2️⃣
+Hook: "Stop wasting time!"
+Solution: ${product} makes life easy
+Proof: 5-star reviews
+CTA: Order today!
+
+3️⃣
+Hook: "Watch this!"
+Solution: ${product} is the answer
+Proof: Everyone using it
+CTA: Click now!`;
+
+    // COMPETITOR
+    document.getElementById("competitorOutput").value = 
+`Competitor Analysis for ${product}
+
+- Competitor 1: High quality videos
+- Competitor 2: Simple UGC videos
+- Weakness: Expensive pricing
+- Strategy: Lower price + fast demo videos`;
+
+    // SUPPLIER
+    document.getElementById("supplierOutput").value = 
+`Suppliers for ${product}
+
+1. Supplier A
+- Price: $10
+- MOQ: 100
+- Shipping: 7-10 days
+- Rating: ⭐4.8
+
+2. Supplier B
+- Price: $8
+- MOQ: 200
+- Shipping: 10-15 days
+- Rating: ⭐4.5
+
+3. Local Supplier
+- Price: $12
+- MOQ: 20
+- Shipping: 2-5 days
+- Advantage: Fast delivery`;
+}
+</script>
+
+</body>
+</html>
